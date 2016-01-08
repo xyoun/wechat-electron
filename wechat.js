@@ -15,11 +15,9 @@ onload = function () {
     for (var css in injectCSS) {
       webview.insertCSS(injectCSS[css]);
     }
+    // inject js to trigger if there is new message in.
     webview.executeJavaScript('injectJS.getBadge()');
-
-    setTimeout(function() {
-      webview.executeJavaScript('injectJS.setBadge()');
-    }, 5000)
   })
 }
+
 

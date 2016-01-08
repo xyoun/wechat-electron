@@ -2,6 +2,7 @@ const ipcRenderer = require('electron').ipcRenderer;
 
 injectJS = {
   getBadge: function () {
+    // listen if the menu dom has changed. if changed, count all unread message and sent message to ipcMain.
     $(".panel").bind('DOMSubtreeModified', function (e) {
       if (e.target.innerHTML.length > 0) {
         var count = 0;
@@ -16,9 +17,6 @@ injectJS = {
         }
       }
     })
-  },
-  setBadge: function () {
-    ipcRenderer.send('badge-changed', "5");
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "name": "WeChat in Electron",
+  "name": "wechat-electron",
   "version": "1.0.0",
   "description": "WeChant wrapped with Electron",
   "main": "app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "url": "git@github.com:xyoun/wechat-electron.git"
   },
   "keywords": [
     "Electron",
@@ -16,6 +16,6 @@
   ],
   "author": "xyoun",
   "devDependencies": {
-    "electron-prebuilt": "^0.35.0",
+    "electron-prebuilt": "0.36.3"
   }
 }
