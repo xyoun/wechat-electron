@@ -42,8 +42,17 @@ ln ~/Dropbox/wechat-electron ~/Library/Application\ Support/wechat-electron
 
 #### 注意
 
-* 不要截图之后把图片粘到 QQ 的输入框，然后拖拽图片到 WeChat，会导致 WeChat 跳转，暂无解决方法。
+* 不要截图之后把图片粘到 QQ 的输入框，然后拖拽图片到 WeChat Electron，会导致 WeChat Electron 跳转，暂无解决方法。
 * 多终端下各终端不会自己同步消息，但是会同步自己在手机上发送的消息，譬如：
   1. A 机器上自己发的消息，手机能同步到，但在 B 机器上不会自动同步到；
   2. 别人发过来的消息，会自动同步到所有终端；
   3. 自己手机发出去的消息，会自动同步到所有终端。
+
+#### 已知 Bugs 或未做的 Feature：
+* cmd + R 无效（欢迎 PR）；
+* cmd + W 不会自动隐藏（欢迎 PR）；
+* cmd + F 不会聚焦到搜索（欢迎 PR）；
+* 点击左上角的 X 会直接退出（欢迎 PR）；
+* 输入第一个字的时候拼音候选框可能不是在输入框附近（欢迎 PR）；
+* 点击通知不会默认聚焦到输入框（欢迎 PR）；
+* 某些图片在某些情况下拖拽到 WeChat Electron 会导致 WeChat Electron 整个页面的跳转去显示那一张图片（欢迎 PR）；
