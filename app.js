@@ -13,7 +13,7 @@ app.on('ready', function () {
   mainWindow.loadURL('file://' + __dirname + '/index.html');
   mainWindow.webContents.on('will-navigate', ev => {
     ev.preventDefault();
-  })
+  });
 
   //mainWindow.webContents.openDevTools();
 

@@ -27,8 +27,11 @@ onload = function () {
   });
 
   webview.addEventListener('new-window', function (e) {
-    console.log(e);
     var url = getParameterByName(e.url, 'requrl');
-    shell.openExternal(url);
+    if (url.length > 1) {
+      shell.openExternal(url);
+    } else {
+      shell.openExternal(e.url);
+    }
   })
 };
