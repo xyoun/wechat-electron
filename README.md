@@ -25,4 +25,3 @@ electron app.js
 
 * can not drag&drop after using electron packager to pack to Native app.
 * external share link can not open.
-* badge number may not show correctly after read new message.

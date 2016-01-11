@@ -33,6 +33,11 @@ app.on('ready', function () {
 
 // RPC to listen any badge change events. events sent from webview.
 ipcMain.on('badge-changed', function (event, num) {
-  // num shoud be a string.
+  // num should be a string.
   app.dock.setBadge(num);
+});
+
+ipcMain.on('logging', function (event, log) {
+  // num should be a string.
+  console.log(log);
 });
