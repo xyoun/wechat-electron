@@ -22,6 +22,6 @@ or
 electron app.js
 ```
 
-#### Bugs
+#### CAUTION
 
-* can not drag&drop image. but you can paste image.
+* do not paste image in QQ input field and then drag it into Wechat. it will cause Wechat navigation.
