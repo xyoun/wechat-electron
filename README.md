@@ -24,4 +24,4 @@ electron app.js
 
 #### Bugs
 
-* can not drag&drop after using electron packager to pack to Native app.
+* can not drag&drop image. but you can paste image.
