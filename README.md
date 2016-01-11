@@ -1,5 +1,5 @@
 
-WeChat wrapped with Electron.
+### WeChat Electron.
 
 #### 功能
 
