@@ -1,11 +1,18 @@
-const ipcRenderer = require('electron').ipcRenderer;
+const shell = require('electron').shell;
 
 var injectCSS = [
   'div.main {height: 100% !important;padding-top: 0 !important;};',
   'div.main_inner {max-width: 100% !important;min-width: 100% !important};',
   'p.copyright {display: none !important};',
   'a.web_wechat_screencut {display: none !important}'
-]
+];
+
+function getParameterByName(url, name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(url);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 onload = function () {
   var webview = document.getElementById("wechat");
@@ -17,7 +24,11 @@ onload = function () {
     }
     // inject js to trigger if there is new message in.
     webview.executeJavaScript('injectJS.getBadge()');
+  });
+
+  webview.addEventListener('new-window', function (e) {
+    console.log(e);
+    var url = getParameterByName(e.url, 'requrl');
+    shell.openExternal(url);
   })
-}
-
-
+};

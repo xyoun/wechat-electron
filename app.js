@@ -12,22 +12,12 @@ app.on('ready', function () {
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
-  // prevent webview open drag&dropped file
-  webContents = mainWindow.webContents;
-  webContents.on("will-navigate", function(e) {
-    e.preventDefault();
-  });
+  //mainWindow.webContents.openDevTools();
 
   app.dock.setBadge("");
   app.on('window-all-closed', function() {
     mainWindow = null;
     app.quit();
-  });
-  mainWindow.on('close', function(e) {
-    mainWindow.hide();
-  })
-  app.on('activate', function(){
-    mainWindow.show();
   });
 });
 
